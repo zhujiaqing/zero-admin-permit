@@ -165,12 +165,12 @@ class view:
                 '<li class="list-group-item">Mac/Linux 系统更改hosts文件 /etc/hosts</li>' \
                 '<li class="list-group-item">家庭IP非固定会经常变更</li>' \
                 '<li class="list-group-item">每次IP申请有效期为3天</li>' \
-                '</ul></div>' \
+                '</ul></div>' 
             
             body = '<div STYLE="padding: 20 100">' \
             '<div class="panel panel-default">' \
             '<table class="table">%s</table>' \
-            '<div class="panel-body">%s</div>'
+            '<div class="panel-body">%s</div>' \
             '<div class="panel-heading"><h1>友加后台访问权限自助申请</h1></div>' \
             '<div class="panel-body">后台列表 (若公网没有解析需要拷贝下面的内容粘贴至hosts文件)</div>' \
             '<table class="table">%s</table>' \
