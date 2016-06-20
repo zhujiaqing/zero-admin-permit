@@ -175,7 +175,7 @@ class view:
             '<div class="panel-body">后台列表 (若公网没有解析需要拷贝下面的内容粘贴至hosts文件)</div>' \
             '<table class="table">%s</table>' \
             '<div class="panel-body">已经授权的IP列表</div>' \
-            '</div></div>' % (t_ip, '', t_admin)
+            '</div></div>' % (t_ip, str(t_tip), t_admin)
             
             return white.get_base_html(body)
         else:
