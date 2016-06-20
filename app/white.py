@@ -167,7 +167,7 @@ class view:
                 '<li class="list-group-item">每次IP申请有效期为3天</li>' \
                 '</ul></div>' \
             
-            body = '<DIV STYLE="padding: 20 100">' \
+            body = '<div STYLE="padding: 20 100">' \
             '<div class="panel panel-default">' \
             '<table class="table">%s</table>' \
             '<div class="panel-body">%s</div>'
