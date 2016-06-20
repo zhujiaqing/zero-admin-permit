@@ -160,20 +160,22 @@ class view:
                                                                              permit.get('username', '')
                                                                              )
             
+            t_tip = '<p>注意事项：</p><ul class="list-group">' \
+                '<li class="list-group-item">Windows 系统更改hosts文件 C:\Windows\System32\drivers\etc\hosts</li>' \
+                '<li class="list-group-item">Mac/Linux 系统更改hosts文件 /etc/hosts</li>' \
+                '<li class="list-group-item">家庭IP非固定会经常变更</li>' \
+                '<li class="list-group-item">每次IP申请有效期为3天</li>' \
+                '</ul></div>' \
+            
             body = '<DIV STYLE="padding: 20 100">' \
             '<div class="panel panel-default">' \
+            '<table class="table">%s</table>' \
+            '<div class="panel-body">%s</div>'
             '<div class="panel-heading"><h1>友加后台访问权限自助申请</h1></div>' \
-            '<div class="panel-body"><p>注意事项：</p><ul class="list-group">' \
-            '<li class="list-group-item">Windows 系统更改hosts文件 C:\Windows\System32\drivers\etc\hosts</li>' \
-            '<li class="list-group-item">Mac/Linux 系统更改hosts文件 /etc/hosts</li>' \
-            '<li class="list-group-item">家庭IP非固定会经常变更</li>' \
-            '<li class="list-group-item">每次IP申请有效期为3天</li>' \
-            '</ul></div>' \
             '<div class="panel-body">后台列表 (若公网没有解析需要拷贝下面的内容粘贴至hosts文件)</div>' \
             '<table class="table">%s</table>' \
             '<div class="panel-body">已经授权的IP列表</div>' \
-            '<table class="table">%s</table>' \
-            '</DIV></DIV>' % (t_admin, t_ip)
+            '</div></div>' % (t_ip, t_tip, t_admin)
             
             return white.get_base_html(body)
         else:
