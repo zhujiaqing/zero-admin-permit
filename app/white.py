@@ -147,7 +147,7 @@ class view:
                                                                                      admin.get('memo', '')
                                                                                      )
             
-            t_ip = '<tr><td>IP</td><td>还剩下有效时间/s</td><td>申请时间</td><td>手机号码</td><td>用户名</td></tr>'
+            t_ip = '<tr><td>IP</td><td>还剩下有效时间/s</td><td>申请时间/YYYY-mm-dd HH:MM</td><td>手机号码</td><td>用户名</td></tr>'
             for permit in white.get_permit_list():
                 t_ip += '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
                                                                              permit.get('ip', ''),
