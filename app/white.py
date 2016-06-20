@@ -83,6 +83,11 @@ class White:
             f.close()
         os.system('/usr/local/nginx/sbin/nginx -s reload')
     
+    def reload_nginx(self, thread_name, delay):
+        while True:
+            self.refresh()
+            time.sleep(delay)
+    
     def send_sms(self, phone, content):
         try:
             params = {'phone':phone, 'content':content}
@@ -198,4 +203,11 @@ class home:
         return white.get_base_html(body)
 
 if __name__ == "__main__":
+    import thread
+    thread.start_new_thread(white.reload_nginx, ('Thread_reload_nginx', 1 * 24 * 60 * 60))
+
     app.run()
+
+    print '\nCompleted\n'
+    
+    
